@@ -1,12 +1,12 @@
 # 🎮 Кто хочет стать миллионером — БачатаМания Edition
 
-Интерактивная викторина "Кто хочет стать миллионером", адаптированная для мероприятий клуба "БачатаМания". Игра с полным звуковым сопровождением, тремя подсказками и динамической системой вопросов.
+Интерактивная викторина "Кто хочет стать миллионером", адаптированная для мероприятия Натальи Братовой. Игра с полным звуковым сопровождением, тремя подсказками и динамической системой вопросов.
 
 ![Игра](screenshots/game.png)
 
 ## 🌐 Демо
 
-[Играть онлайн](https://baikhonov.github.io/millionaire-game/)
+[Играть онлайн](https://baikhonov.github.io/millionaire-game-natalya-bratova/)
 
 ## ✨ Особенности
 
@@ -62,8 +62,8 @@
 # Клонирование репозитория
 
 ```bash
-git clone https://github.com/baikhonov/millionaire-game.git
-cd millionaire-game
+git clone https://github.com/baikhonov/millionaire-game-natalya-bratova.git
+cd millionaire-game-natalya-bratova
 ```
 
 # Установка зависимостей
@@ -100,11 +100,8 @@ npm run preview
 
 Деплоит на GitHub Pages
 
-Сайт доступен по адресу: https://baikhonov.github.io/millionaire-game/
+Сайт доступен по адресу: https://baikhonov.github.io/millionaire-game-natalya-bratova/
 
 ## 🙏 Благодарности
 
 Вдохновлено классической телевизионной игрой "Кто хочет стать миллионером"
-
-Клуб "БачатаМания" за идею интеграции тематических вопросов
-https://vk.com/bachatamania_56
