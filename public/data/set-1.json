@@ -1,0 +1,415 @@
+[
+    {
+        "id": 1,
+        "text": "На каком этаже находится зал студии БачатаМания?",
+        "options": [
+            {
+                "id": "A",
+                "text": "На первом",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "На втором",
+                "isCorrect": true
+            },
+            {
+                "id": "C",
+                "text": "На третьем",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "На четвёртом",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 1
+    },
+    {
+        "id": 2,
+        "text": "Как зовут бачата диджея в Орске?",
+        "options": [
+            {
+                "id": "A",
+                "text": "Аваз",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "Ринат",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "Самрат",
+                "isCorrect": true
+            },
+            {
+                "id": "D",
+                "text": "Эдгар",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 1
+    },
+    {
+        "id": 3,
+        "text": "Какой волны нет в бачате?",
+        "options": [
+            {
+                "id": "A",
+                "text": "Прямой",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "Обратной",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "Фронтальной",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "Морской",
+                "isCorrect": true
+            }
+        ],
+        "difficulty": 1
+    },
+    {
+        "id": 4,
+        "text": "Назовите исполнителя которого нет в бачате",
+        "options": [
+            {
+                "id": "A",
+                "text": "Dama",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "Shama",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "Puma",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "Lama",
+                "isCorrect": true
+            }
+        ],
+        "difficulty": 1
+    },
+    {
+        "id": 5,
+        "text": "Как называется работа ног в бачате?",
+        "options": [
+            {
+                "id": "A",
+                "text": "Foodwork",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "Football",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "Footwork",
+                "isCorrect": true
+            },
+            {
+                "id": "D",
+                "text": "Foodcourt",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 1
+    },
+    {
+        "id": 6,
+        "text": "Кто из них исполнитель бачаты?",
+        "options": [
+            {
+                "id": "A",
+                "text": "JR",
+                "isCorrect": true
+            },
+            {
+                "id": "B",
+                "text": "QR",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "PR",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "IR",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 2
+    },
+    {
+        "id": 7,
+        "text": "Сколько стоит пробное занятие в студии БачатаМания?",
+        "options": [
+            {
+                "id": "A",
+                "text": "300",
+                "isCorrect": true
+            },
+            {
+                "id": "B",
+                "text": "200",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "400",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "299",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 2
+    },
+    {
+        "id": 8,
+        "text": "Чье логово бачата тусовки находится в Тюмени?",
+        "options": [
+            {
+                "id": "A",
+                "text": "Медведей",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "Гиен",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "Волков",
+                "isCorrect": true
+            },
+            {
+                "id": "D",
+                "text": "Шакалов",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 2
+    },
+    {
+        "id": 9,
+        "text": "Как переводится слово «bachata»?",
+        "options": [
+            {
+                "id": "A",
+                "text": "Веселье",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "Праздник",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "Вечеринка",
+                "isCorrect": true
+            },
+            {
+                "id": "D",
+                "text": "Радость",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 3
+    },
+    {
+        "id": 10,
+        "text": "Кто поёт в этой песне?",
+        "media": {
+            "type": "audio",
+            "url": "/sounds/questions/pinto_picasso.mp3"
+        },
+        "options": [
+            {
+                "id": "A",
+                "text": "Jiory",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "Sebas Garreta",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "Mario Baro",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "Pinto Picasso",
+                "isCorrect": true
+            }
+        ],
+        "difficulty": 3
+    },
+    {
+        "id": 11,
+        "text": "Кто из них исполнитель песен бачаты?",
+        "options": [
+            {
+                "id": "A",
+                "text": "Prince Charles",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "Prince Royce",
+                "isCorrect": true
+            },
+            {
+                "id": "C",
+                "text": "Prince Luis",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "Prince Andrew",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 3
+    },
+    {
+        "id": 12,
+        "text": "Даниель Дезире это...",
+        "options": [
+            {
+                "id": "A",
+                "text": "Фамилия и имя музыканта",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "Фамилия и имя певца",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "Танцевальная пара",
+                "isCorrect": true
+            },
+            {
+                "id": "D",
+                "text": "Танцевальный элемент",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 4
+    },
+    {
+        "id": 13,
+        "text": "Когда зародился сеншуал в бачате?",
+        "options": [
+            {
+                "id": "A",
+                "text": "2011",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "2012",
+                "isCorrect": true
+            },
+            {
+                "id": "C",
+                "text": "2013",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "2014",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 4
+    },
+    {
+        "id": 14,
+        "text": "Назовите музыкальный инструмент",
+        "media": {
+            "type": "image",
+            "url": "/images/bongo.webp"
+        },
+        "options": [
+            {
+                "id": "A",
+                "text": "Бонго",
+                "isCorrect": true
+            },
+            {
+                "id": "B",
+                "text": "Гуира",
+                "isCorrect": false
+            },
+            {
+                "id": "C",
+                "text": "Рекинто",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "Сегунда",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 4
+    },
+    {
+        "id": 15,
+        "text": "Когда в Испании проходил Чемпионат Мира по бачате 2025?",
+        "options": [
+            {
+                "id": "A",
+                "text": "23 октября",
+                "isCorrect": false
+            },
+            {
+                "id": "B",
+                "text": "24 октября",
+                "isCorrect": true
+            },
+            {
+                "id": "C",
+                "text": "25 октября",
+                "isCorrect": false
+            },
+            {
+                "id": "D",
+                "text": "26 октября",
+                "isCorrect": false
+            }
+        ],
+        "difficulty": 5
+    }
+]
