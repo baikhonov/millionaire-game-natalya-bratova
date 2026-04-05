@@ -6,7 +6,11 @@
     <div v-if="!gameStarted" class="start-screen">
       <div class="start-card">
         <div class="logo">
-          <img src="/images/logo-bm.webp" width="250px" alt="Лого Бачатамания" />
+          <!-- <img src="/images/logo-bm.webp" width="250px" alt="Лого Бачатамания" /> -->
+          <h1>
+            <div class="logo-organizer">Bachata-party</div>
+            <div>Natalya Bratova</div>
+          </h1>
           <img src="/images/logo-game.webp" width="250px" alt="Лого игры" />
         </div>
 
@@ -445,9 +449,9 @@ body {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
   }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 20px rgba(255, 215, 0, 0);
   }
   100% {
     transform: scale(1);
@@ -496,6 +500,7 @@ body {
   justify-content: center;
   z-index: 1000;
   animation: fadeIn 0.5s ease;
+  /* animation: pulse 2s infinite; */
 }
 
 .start-card {
@@ -1001,5 +1006,9 @@ body {
   transform: scale(1.05);
   background: linear-gradient(135deg, #5a3f2e, #3a2a1e);
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.start-card h1 .logo-organizer {
+  color: #fff;
 }
 </style>
