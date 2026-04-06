@@ -5,16 +5,6 @@
       "id": 1,
       "name": "Сет 1",
       "file": "data/set-1.json"
-    },
-    {
-      "id": 2,
-      "name": "Сет 2",
-      "file": "data/set-2.json"
-    },
-    {
-      "id": 3,
-      "name": "Сет 3",
-      "file": "data/set-3.json"
     }
   ]
 }
