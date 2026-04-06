@@ -1,7 +1,8 @@
+// src/composables/useGameLogic.ts
 import { ref, computed, readonly } from 'vue'
 import { useQuestions } from './useQuestions'
 import { useSoundManager } from './useSoundManager'
-import type { Option, UsedHints } from '@/types/game'
+import type { Option } from '@/types/game'
 
 // Настройки задержек
 const DELAYS = {
@@ -14,17 +15,7 @@ const DELAYS = {
 }
 
 export function useGameLogic() {
-  const {
-    getQuestion,
-    totalQuestions,
-    isLastQuestion,
-    startNewGame,
-    getQuestionsStats,
-    resetAllProgress,
-    allSetsUsed,
-    currentSetName,
-    markAllSetsUsed,
-  } = useQuestions()
+  const { getQuestion, totalQuestions, isLastQuestion, loadQuestions } = useQuestions()
 
   const soundManager = useSoundManager()
 
@@ -72,8 +63,6 @@ export function useGameLogic() {
     if (totalQuestions() === 0) return 0
     return (questionNumber.value / totalQuestions()) * 100
   })
-
-  const allOptionsRevealed = computed(() => optionsRevealed.value.length === 4)
 
   const formatMoney = (amount: number, currency = 'бачатакоинов'): string => {
     return new Intl.NumberFormat('ru-RU').format(amount) + ' ' + currency
@@ -145,6 +134,10 @@ export function useGameLogic() {
     isLoading.value = true
     resetGame()
     isLoading.value = false
+
+    setTimeout(() => {
+      startRevealOptions()
+    }, 500)
   }
 
   const resetGame = (): void => {
@@ -223,7 +216,6 @@ export function useGameLogic() {
       gameResult.value = 'ПОБЕДА! Вы стали миллионером!'
       finalWinnings.value = 1000000
       gameEnded.value = true
-      markAllSetsUsed()
     } else {
       const isMilestone = currentQuestionIndex.value === 4 || currentQuestionIndex.value === 9
 
@@ -280,14 +272,12 @@ export function useGameLogic() {
         gameResult.value = `К сожалению, вы ошиблись!`
         gameEnded.value = true
         soundManager.playGameOverMusic()
-        markAllSetsUsed()
       }, extraDelay)
     } else {
       setTimeout(() => {
         gameResult.value = `К сожалению, вы ошиблись!`
         gameEnded.value = true
         soundManager.playGameOverMusic()
-        markAllSetsUsed()
       }, DELAYS.NEXT_QUESTION)
     }
   }
@@ -351,7 +341,6 @@ export function useGameLogic() {
 
     optionsRevealed: readonly(optionsRevealed),
     isRevealingOptions: readonly(isRevealingOptions),
-    allOptionsRevealed: readonly(allOptionsRevealed),
     isOptionRevealed,
     startRevealOptions,
 
@@ -369,12 +358,7 @@ export function useGameLogic() {
     useAudienceHint,
     takeMoney,
 
-    startNewGame,
-    getQuestionsStats,
-    resetAllProgress,
-    allSetsUsed,
-    currentSetName,
+    loadQuestions,
     totalQuestions,
-    markAllSetsUsed,
   }
 }

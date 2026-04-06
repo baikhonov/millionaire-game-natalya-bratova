@@ -14,18 +14,7 @@
           <img src="/images/logo-game.webp" width="250px" alt="Лого игры" />
         </div>
 
-        <button class="start-button" @click="startGame" :disabled="allSetsUsed">Начать игру</button>
-
-        <!-- Кнопка "Игроки" — показываем только если есть победители -->
-        <button class="winners-button" @click="showWinnersModal = true">🏆 Игроки</button>
-
-        <div v-if="allSetsUsed" class="warning-message">
-          ⚠️ Все сеты вопросов использованы! Нажмите "Сбросить пул вопросов" чтобы продолжить.
-        </div>
-
-        <button v-if="allSetsUsed" class="reset-progress-button" @click="resetProgress">
-          🔄 Сбросить пул вопросов
-        </button>
+        <button class="start-button" @click="startGame">Начать игру</button>
       </div>
     </div>
 
@@ -137,9 +126,6 @@
       {{ isMuted ? '🔇' : '🔊' }}
     </button>
   </div>
-
-  <!-- Модалка победителей -->
-  <WinnersGallery v-if="showWinnersModal" @close="showWinnersModal = false" />
 </template>
 
 <script setup lang="ts">
@@ -160,7 +146,6 @@ const showFirstQuestion = ref(false)
 const game = useGameLogic()
 const sound = useSoundManager()
 const milestoneRef = ref<InstanceType<typeof MilestoneNotification> | null>(null)
-const showWinnersModal = ref(false)
 
 const gameStarted = ref(false)
 
@@ -190,27 +175,14 @@ const {
   useFiftyFifty,
   useCallHint,
   useAudienceHint,
-  startNewGame,
-  resetAllProgress,
-  allSetsUsed,
   totalQuestions,
-  getQuestionsStats,
   startRevealOptions,
+  loadQuestions,
 } = game
 
 const { isMuted, isAudioEnabled, enableAudio, toggleMute } = sound
 
 const startGame = async () => {
-  if (allSetsUsed.value) {
-    alert('Все сеты вопросов использованы. Пожалуйста, сбросьте пул вопросов.')
-    return
-  }
-
-  if (totalQuestions() === 0) {
-    alert('Нет загруженных вопросов. Попробуйте перезагрузить страницу.')
-    return
-  }
-
   enableAudio()
   await new Promise((resolve) => setTimeout(resolve, 100))
 
@@ -221,10 +193,8 @@ const startGame = async () => {
   }
 
   gameStarted.value = true
-
   showFirstQuestion.value = false
 }
-
 const showFirstQuestionHandler = async () => {
   showFirstQuestion.value = true
 
@@ -244,20 +214,9 @@ const revealAnswer = () => {
 }
 
 const restartGame = async () => {
-  const stats = getQuestionsStats()
-  const hasRemainingSets = stats.remaining > 0
-
-  if (!hasRemainingSets) {
-    gameStarted.value = false
-    showFirstQuestion.value = false
-    return
-  }
-
-  // ✅ Сначала останавливаем всю музыку
   sound.stopMusic()
   sound.stopAllEffects()
 
-  await startNewGame()
   resetGame()
   await initGame()
 
@@ -314,8 +273,8 @@ const onTimerComplete = () => {
 
 onMounted(async () => {
   await sound.preloadAllMusic()
-
-  await startNewGame()
+  await loadQuestions() // вместо startNewGame
+  console.log('✅ Вопросы готовы, ждём нажатия "Начать игру"')
 })
 
 const resetProgress = async () => {
@@ -986,26 +945,6 @@ body {
     padding: 10px 30px;
     font-size: 18px;
   }
-}
-
-.winners-button {
-  display: none;
-  margin-top: 15px;
-  padding: 12px 30px;
-  background: linear-gradient(135deg, #4a2f1e, #2a1a0e);
-  color: #ffd700;
-  border: 1px solid #ffd700;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.winners-button:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #5a3f2e, #3a2a1e);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
 }
 
 .start-card h1 .logo-organizer {

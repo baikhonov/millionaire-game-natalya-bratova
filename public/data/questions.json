@@ -367,7 +367,7 @@
         "text": "Кто поёт в этой песне?",
         "media": {
             "type": "audio",
-            "url": "/images/dj_madei.mp3"
+            "url": "/sounds/questions/dj_madei.mp3"
         },
         "options": [
             {
