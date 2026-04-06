@@ -140,7 +140,6 @@ import HintsPanel from './components/game/HintsPanel.vue'
 import confetti from 'canvas-confetti'
 import MilestoneNotification from './components/ui/MilestoneNotification.vue'
 import TimerDisplay from './components/ui/TimerDisplay.vue'
-import WinnersGallery from './components/ui/WinnersGallery.vue'
 
 const showFirstQuestion = ref(false)
 const game = useGameLogic()
