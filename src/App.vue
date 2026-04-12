@@ -8,7 +8,7 @@
         <div class="logo">
           <!-- <img src="/images/logo-bm.webp" width="250px" alt="Лого Бачатамания" /> -->
           <h1>
-            <div class="logo-organizer">Bachata-party</div>
+            <div class="logo-organizer">Bachata Party</div>
             <div>Natalya Bratova</div>
           </h1>
           <img src="/images/logo-game.webp" width="250px" alt="Лого игры" />
