@@ -12,7 +12,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  base: process.env.NODE_ENV === 'production' ? '/millionaire-game-natalya-bratova/' : '/',
+  base: process.env.NODE_ENV === '/',
   server: {
     host: '0.0.0.0', // Слушаем все сетевые интерфейсы
     port: 5173,
